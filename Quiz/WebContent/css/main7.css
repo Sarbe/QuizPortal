@@ -1,0 +1,83 @@
+input[type=button] {
+	background-color: #F692F1;
+	border: 1px solid #F692F1;
+	color: #fff;
+	cursor: pointer;
+	padding: 2px 15px;
+	text-decoration: none;
+	transition: color .25s ease-out 0s
+}
+
+input[type=text],textarea {
+	border: 1px solid #DADADA
+}
+
+.aLink {
+	border: 1px solid #F692F1;
+	color: #F692F1
+}
+
+.aLink:hover {
+	background-color: #F692F1;
+	border: 1px solid #F692F1;
+	color: #fff
+}
+
+.siteHeader {
+	background-color: #F692F1;
+	color: #fff
+}
+
+.feedback {
+	border: 2px solid #F692F1;
+	z-index:10;
+	visibility: hidden;
+}
+
+#fbTbl tbody tr td {
+	border-bottom: #000
+}
+
+.dataTbls tbody td {
+	border-bottom: 1px solid #F692F1
+}
+
+.dataTbls thead {
+	background-color: #F692F1
+}
+
+.dataTbls thead tr span {
+	color: #fff
+}
+
+#qstn_count {
+	border: 4px solid #F692F1
+}
+
+.dataTbl {
+	background-color: #fff
+}
+
+.divHeader {
+	background-color: maroon
+}
+
+/*  qstnForuser */
+
+.attempted {
+	background-color: #F692F1;
+}
+
+.bk {
+	border: 1px solid #F692F1;
+	
+}
+
+/*  qstnPage */
+.selectedQstn {
+	background-color: #F692F1;
+}
+
+.editQuestion:hover{
+	background-color: #F692F1;
+}

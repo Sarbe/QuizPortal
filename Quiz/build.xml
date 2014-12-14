@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="Quiz">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/annotations-api.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/catalina-ant.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/catalina-ha.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/catalina-tribes.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/catalina.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/ecj-4.2.2.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/el-api.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/jasper-el.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/jasper.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/jsp-api.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/servlet-api.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/tomcat-api.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/tomcat-coyote.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/tomcat-dbcp.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/tomcat-i18n-es.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/tomcat-i18n-fr.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/tomcat-i18n-ja.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/tomcat-jdbc.jar"/>
+        <pathelement location="../../Softwares/apache-tomcat-7.0.42/lib/tomcat-util.jar"/>
+    </path>
+    <path id="Web App Libraries.libraryclasspath">
+        <pathelement location="WebContent/WEB-INF/lib/commons-fileupload-1.2.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-io-2.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/gson-2.2.4.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/java-libpst.0.7.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/log4j-1.2.17.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/mailapi.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/ojdbc14-10.2.0.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/poi-3.9-20121203.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/smtp.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/velocity-1.7-dep.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/velocity-1.7.jar"/>
+    </path>
+    <path id="EAR Libraries.libraryclasspath"/>
+    <path id="Quiz.classpath">
+        <pathelement location="build/classes"/>
+        <path refid="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath"/>
+        <path refid="Web App Libraries.libraryclasspath"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <pathelement location="WebContent/WEB-INF/lib/gson-2.2.4.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/java-libpst.0.7.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/ojdbc14-10.2.0.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/poi-3.9-20121203.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-fileupload-1.2.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-io-2.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/log4j-1.2.17.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/mailapi.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/velocity-1.7.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/velocity-1.7-dep.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/smtp.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="build/classes"/>
+        <copy includeemptydirs="false" todir="build/classes">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="build/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="build/classes" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="Quiz.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target name="CommonFns">
+        <java classname="util.CommonFns" failonerror="true" fork="yes">
+            <classpath refid="Quiz.classpath"/>
+        </java>
+    </target>
+    <target name="ConfigFile">
+        <java classname="util.ConfigFile" failonerror="true" fork="yes">
+            <classpath refid="Quiz.classpath"/>
+        </java>
+    </target>
+    <target name="CSSCreator">
+        <java classname="util.CSSCreator" failonerror="true" fork="yes">
+            <classpath refid="Quiz.classpath"/>
+        </java>
+    </target>
+    <target name="ImageManager">
+        <java classname="util.ImageManager" failonerror="true" fork="yes">
+            <classpath refid="Quiz.classpath"/>
+        </java>
+    </target>
+    <target name="ImportQstnExcel">
+        <java classname="util.ImportQstnExcel" failonerror="true" fork="yes">
+            <classpath refid="Quiz.classpath"/>
+        </java>
+    </target>
+    <target name="Test (2)">
+        <java classname="Test" failonerror="true" fork="yes">
+            <classpath refid="Quiz.classpath"/>
+        </java>
+    </target>
+    <target name="Test (3)">
+        <java classname="test.Test" failonerror="true" fork="yes">
+            <classpath refid="Quiz.classpath"/>
+        </java>
+    </target>
+</project>

@@ -1,0 +1,9 @@
+/action/
+/bean/
+/config.properties
+/db/
+/log4j.properties
+/res/
+/test/
+/util/
+/velocity/

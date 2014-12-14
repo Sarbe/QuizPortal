@@ -1,0 +1,58 @@
+<html>
+<head><title> </title>
+<style type="text/css">
+body {
+font-family: Arial,Sans-Serif,Helvetica,sans-serif;
+background: #eee;
+font-size: 12px;
+margin: 0;
+padding: 0;
+color: #000;
+}
+.dataTable {
+border-collapse: collapse;
+margin: 0 auto;
+}
+.dataTable thead {
+background-color: #1876e8;
+}
+.dataTable thead tr span {
+color: #fff;
+}
+</style>
+</head>
+<body >
+<div>
+			<div style="margin: 0 auto;background-color: transparent;height: 500px;">
+				<table border="0" align="center" style="border-collapse: collapse;margin: 0 auto;">
+				<thead style="background-color: #1876e8;">
+					<tr>
+						<td colspan="6" align="center"><span style="font-size: 15px;font-weight: bold;">Result for Quiz:: $helpeCls.quizNo </span></td>
+					</tr>
+					<tr>
+						<th><span style="color: #fff;"><span>Rank</span></span></th>
+						<th><span style="color: #fff;">Emp Id</span></th>
+						<th><span style="color: #fff;">Emp Name</span></th>
+						<th><span style="color: #fff;">Emp Email</span></th>
+						<th><span style="color: #fff;">Quiz Submit Date</span></th>
+						<th><span style="color: #fff;">Score</span></th>
+					</tr>
+					</thead>
+					
+					<tbody>
+					#foreach ($emp in $helpeCls.empList)
+				
+						<tr>
+							<td>$emp.rank</td>
+							<td>$emp.empDtl.empId</td>
+							<td>$emp.empDtl.empName</td>
+							<td>$emp.empDtl.empEmail</td>
+							<td>$emp.appear_Dt</td>
+							<td>$emp.score</td>
+						</tr>
+					#end
+				</table>
+			</div>
+		<div class="alertX " id="msgAlert" style="width: 328px; display: none;">Quiz Marke as eclared. Mail will be sent.</div></div>
+</body>
+<html>
